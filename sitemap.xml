@@ -2,20 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.com/homepage/demo/</loc>
-  </url><url>
-    <loc>http://example.com/homepage/sev/</loc>
-  </url><url>
-    <loc>http://example.com/homepage/cachewarp/</loc>
-  </url><url>
-    <loc>http://example.com/homepage/implications/</loc>
-  </url><url>
-    <loc>http://example.com/homepage/faq/</loc>
-  </url><url>
-    <loc>http://example.com/homepage/who-found-it/</loc>
-  </url><url>
-    <loc>http://example.com/homepage/acknowledgements/</loc>
-  </url><url>
-    <loc>http://example.com/</loc>
+    <loc>http://cachewarpattack.com/</loc>
   </url>
 </urlset>
