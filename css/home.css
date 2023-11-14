@@ -1,0 +1,109 @@
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+a {
+  color: var(--link);
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+.contentdark {
+  background: var(--text);
+  color: var(--background);
+}
+
+#home {
+  width: 100%;
+  padding-top: 7rem;
+  padding-bottom: 9rem;
+}
+
+#headline {
+  font-size: 6rem;
+  text-align: center;
+  margin: 0;
+}
+
+.contentsmall {
+  font-size: 1rem;
+}
+
+.contentsmall > .contentcontainer > .contenttitle {
+  font-size: 1rem;
+}
+
+#home > .contentcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+#home > .contentcontainer > img {
+  width: 30%;
+}
+
+#innerhomecontainer > p {
+  padding: 0;
+  text-align: justify;
+}
+
+section {
+  min-height: 200px;
+  padding: 50px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.contentcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  max-width: 1140px;
+}
+
+.spacer {
+  aspect-ratio: 900/50;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.topspacer {
+  background-image: url("/top-steps.svg");
+}
+
+.bottomspacer {
+  background-image: url("/bottom-steps.svg");
+}
+
+.contentcontainer > p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .contentcontainer {
+    width: 85%;
+  }
+  #home {
+    font-size: 1rem;
+  }
+  #home > .contentcontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  #home > .contentcontainer > img {
+    width: 50%;
+  }
+  .contentsmall {
+    font-size: 0.8rem;
+  }
+  .contentsmall > .contentcontainer > .contenttitle {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>FAQ</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/navigation.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/home.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/shortcodes.css">
+    
+
+    
+    <link rel="stylesheet" href="/vendor/fontawesome/css/all.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+    
+
+    
+    <script src="/js/scroll.js" defer></script>
+    
+
+    
+    <script src="/js/shortcodes.js" defer></script>
+    
+    
+    <meta name="generator" content="Hugo 0.120.2">
+</head>
+
+<body><main>
+<article>
+    <h1>FAQ</h1>
+    <div><div class="accordion accordion-active">
+    <p>Is my computer vulnerable to this attack?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" style="display: block"><p>If you have an AMD CPU supporting AMD SEV, yes, your machine is affected.
+Nevertheless, if you do not rely on deploying secure virtual machines using AMD SEV, this vulnerability cannot be leveraged by an attacker.</p>
+<p>For more details, please refer to the official <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3005.html">AMD Security Bulletin</a>.</p>
+</div>
+</div>
+
+<div><div class="accordion ">
+    <p>What is AMD SEV?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" ><a href="https://www.amd.com/en/developer/sev.html">AMD Secure Encrypted Virtualization (SEV)</a> is a CPU extension enabling secure virtual machines in the presence of an untrusted or compromised hypervisor.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Does this work against all variants of AMD SEV, including SEV-SNP?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >Yes, while the exploitation for AMD SEV-SNP is more challenging, CacheWarp can be exploited in all current variants of AMD SEV.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Does CacheWarp affect traditional virtual machine isolation?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >No, CacheWarp only affects AMD SEV, as traditional virtual machines do not offer any protection against malicious hypervisors.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Is this a software or a hardware bug?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >CacheWarp is a <strong>hardware bug</strong> in AMD CPUs.
+For guidance mitigating this vulnerability on affected CPUs, we refer to the official <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3005.html">AMD Security Bulletin</a>.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Is this a transient-execution attack?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >No, CacheWarp is an <strong>architectural</strong> bug and thus does not fall into the category of transient-execution attacks like Meltdown and Spectre. It is also not a side-channel attack.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Is this exploited in the wild?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >We do not know.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Is there more technical information about CacheWarp?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >Yes, there is an academic <a href="paper.pdf">paper</a>.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>What is CVE-2023-20592?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >CVE-2023-20592 is the official reference to CacheWarp. CVE is the standard for information security vulnerability names maintained by MITRE.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Can I use the logo?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" ><p>The logo is free to use, rights waived via CC0. Logo designed by <a href="https://cispa.de/de/people/c01lemo">Lea Mosbach</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logo</td>
+<td><a href="logo.svg">↓ SVG</a></td>
+<td><a href="logo.png">↓ PNG</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</article>
+
+    </main><footer>
+  <div class="contentcontainer">
+    <div id="footercontainer">
+      <div class="footerlogos" style="padding-right:0.5rem;">
+        <div>
+          <img src="/cispa.svg" />
+          <img src="/helmholtz-brand-white.svg" />
+        </div>
+      </div>
+      <div class="footerlogos" style="padding: 0 0.5rem;">
+        <div>
+          <img src="/tugraz.svg" />
+        </div>
+      </div>
+      <div id="footeraddress" style="padding: 0 0.5rem;">
+        <div>
+          <span>CISPA Helmholtz Center for Information Security</span>
+          <span>Stuhlsatzenhaus 5</span>
+          <span>66123 Saarbrücken</span>
+        </div>
+      </div>
+      <div id="footerlinks" style="padding-left: 0.5rem;">
+        <div>
+          <a href="https://cispa.de/en/impressum">Imprint</a>
+          <a href="https://cispa.de/en/data-privacy-policy"
+            >Data Privacy Policy</a
+          >
+        </div>
+      </div>
+    </div>
+    <p style="text-align: center; color: gray;">Want to contribute to such research? <a href="https://career.cispa.de/phd/">CISPA is constantly looking for PhD students</a></p>
+    <p id="footerbottom" style="color: gray;">
+      Copyright © 2023, CISPA Helmholtz Center for Information Security, all rights reserved. - Last Update: 2023-11-14
+    </p>
+  </div>
+</footer>
+</body>
+
+</html>

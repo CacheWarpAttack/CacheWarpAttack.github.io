@@ -1,0 +1,263 @@
+.centercontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.columns > div {
+    flex: 1 1 0;
+}
+
+.accordion {
+  background-color: var(--accordion);
+  cursor: pointer;
+  padding: 1.5rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contentdark .accordion {
+  background-color: var(--accordion-dark);
+  color: var(--text);
+}
+
+.accordion::before {
+  content : "";
+  position: absolute;
+  left: 5%;
+  bottom  : 0;
+  height  : 2px;
+  width   : 90%;
+  border-bottom:2px solid var(--accordion-divider);
+}
+
+.contentdark .accordion::before {
+  border-bottom:2px solid var(--accordion-divider-dark);
+}
+
+.contentdark .accordion-panel {
+  background-color: var(--accordion-content-dark);
+}
+
+.accordion > img {
+  aspect-ratio: 1/1;
+  height: 2.5rem;
+  transition-duration: 0.4s;
+  transition-property: transform;
+}
+
+.accordion > p {
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-active, .accordion:hover {
+  background-color: var(--accordion-active);
+}
+
+.accordion-active > img {
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+}
+
+.accordion-panel {
+  padding: 1.5rem;
+  background-color: var(--accordion-content);
+  display: none;
+  overflow: hidden;
+  width: 100%;
+}
+
+.accordion-panel > p {
+  margin-top: 0;
+}
+
+.smallcolumn {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+.smallcolumn-img {
+  width: 30%;
+}
+
+.smallcolumn-content {
+  width: 70%;
+}
+
+.smallcolumn-reverse {
+  flex-direction: row-reverse;
+}
+
+.smallcolumn-content:not(:has(>p)) {
+  text-align: justify;
+}
+
+.smallcolumn-content > p {
+  text-align: justify;
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--background);
+  background-color: var(--button-background);
+  border: 0;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--button-background-hover);
+}
+
+.buttonoutline {
+  border-style: solid;
+  border-width: 0.25rem;
+  background-color: var(--button-outline-background);
+  border-color: var(--button-border);
+  color: var(--button-border);
+}
+
+.buttonoutline:hover {
+  background-color: var(--button-outline-background-hover);
+}
+
+.buttonsmall {
+  padding: 0.5rem;
+}
+
+dialog {
+  width: 50%;
+  height: fit-content;
+  border-radius: 1rem;
+  border-color: var(--dialog-border);
+  padding: 0;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(1px);
+}
+
+.modalcontainer {
+  width: 100%;
+}
+
+.innermodalcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.innermodalcontainer > textarea {
+  width: 100%;
+  border-radius: 0.5rem;
+  border-width: 0.2rem;
+  border-color: var(--dialog-text-border);
+  overflow: hidden;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.modalbuttoncontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.modalbuttoncontainer > button {
+  background-color: var(--button-background);
+  color: var(--background);
+  border-color: var(--button-border);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  cursor: pointer;
+}
+
+.modalbuttoncontainer > button:active {
+  background-color: var(--button-active);
+}
+
+.modalbuttoncontainer > button > i {
+  padding-right: 0.5rem;
+}
+
+.sctitle {
+  display: inline-block;
+}
+
+.scsubtitle {
+  color: var(--subtitle);
+  font-weight: normal;
+  display: inline-block;
+}
+
+.contentdark .scsubtitle {
+  color: var(--subtitle-dark);
+}
+
+.person .personname {
+  padding-right: 0.5rem;
+  text-decoration: underline;
+}
+
+.person .personaffiliation {
+  font-size: 1rem;
+  color: inherit;
+  text-decoration: underline dotted;
+}
+
+@media screen and (max-width: 768px) {
+  .accordion > img {
+    height: 1.5rem;
+  }
+  .accordion {
+    width: auto;
+  }
+  .accordion-panel {
+    width: auto;
+  }
+
+  .smallcolumn {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .smallcolumn-reverse {
+    flex-direction: column-reverse;
+  }
+  .smallcolumn-img {
+    width: 40%;
+  }
+  .smallcolumn-content {
+    width: 100%;
+  }
+
+  dialog {
+    width: 80%;
+  }
+}

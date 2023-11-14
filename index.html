@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>CacheWarp</title>
+    <meta name="author" content="Leon Trampert" />
+    
+    <link rel="stylesheet" href="/css/styles.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/navigation.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/home.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/shortcodes.css">
+    
+
+    
+    <link rel="stylesheet" href="/vendor/fontawesome/css/all.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+    
+
+    
+    <script src="/js/scroll.js" defer></script>
+    
+
+    
+    <script src="/js/shortcodes.js" defer></script>
+    
+    
+    <meta name="generator" content="Hugo 0.120.2">
+</head>
+
+<body><main>
+
+
+
+
+<nav>
+  <div class="navbar">
+      <div class="nav-logo">
+        <img src="/logo.svg" >
+        <h1>CacheWarp</h1>
+      </div>
+      <ul class="nav-links">
+        <li id="homelink" class="link" data-block="home">
+          CacheWarp
+        </li>
+        
+        
+        <li class="link" data-block="demo">
+          Demo
+        </li>
+        
+        
+        
+        <li class="link" data-block="sev">
+          About
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        <li class="link" data-block="faq">
+          FAQ
+        </li>
+        
+        
+        
+        <li class="link" data-block="who-found-it">
+          Researcher
+        </li>
+        
+        
+        
+        
+      </ul>
+      <div class="menu-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+  </div>
+</nav>
+
+<section id="home">
+  <div class="contentcontainer">
+    <img src="/logo.svg" >
+    <div>
+      <h1 id="headline">Cache<span>Warp</span></h1>
+      <div id="innerhomecontainer"><p>CacheWarp is a new software fault attack on AMD SEV-ES and SEV-SNP.
+It allows attackers to hijack control flow, break into encrypted VMs, and perform privilege escalation inside the VM.</p>
+<a href="/paper.pdf">
+    <button class="linkbutton button "><i class="fas fa-book fa-1x"></i> READ</button>
+</a>
+<div class="columns" style="margin-top: 1rem">
+    <div>
+<button class="modalbutton button buttonoutline buttonsmall" id="citebuttonbutton" onclick="document.getElementById('citebuttonmodal').showModal()">
+    <i class="fa-solid fa-quote-left"></i> CITE
+</button>
+<dialog id="citebuttonmodal" onclick="document.getElementById('citebuttonmodal').close()">
+    <div class="modalcontainer" onclick="(function(event){event.stopPropagation()})(event)">
+        <div class="innermodalcontainer">
+            <textarea id="citebuttontext" rows="16" readonly>
+@inproceedings{Zhang2023Cachewarp,
+    title = {{CacheWarp}: Software-based Fault Injection using Selective State Reset},
+    author = {Zhang, Ruiyi and Gerlach, Lukas and Weber, Daniel and Hetterich, Lorenz and L{\&#34;u}, Youheng and Kogler, Andreas and Schwarz, Michael},
+    booktitle = {33rd USENIX Security Symposium (USENIX Security 24)},
+    year = {2024},
+}
+</textarea>
+            <div class="modalbuttoncontainer">
+                <button onclick="(function(event){ navigator.clipboard.writeText(document.getElementById('citebuttontext').value); document.getElementById('citebuttonmodal').close() })(event)"><i class="fa-solid fa-copy"></i>Copy</button>
+            </div>
+        </div>
+    </div>
+</dialog>
+    </div>
+    <div>
+<a href="https://github.com/cispa/CacheWarp">
+    <button class="linkbutton button buttonoutline buttonsmall"><i class="fas fa-flask fa-1x"></i> TRY</button>
+</a>
+    </div>
+</div>
+</div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="content contentdark contentfirst" id="demo">
+  <div class="contentcontainer">
+    <h2 class="contenttitle">Demo</h2>
+    <div class="columns">
+  
+  <div>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/B3RH15gQ0dI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+  </div>
+  
+  <div>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/Za6KVLVF1AA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+  </div>
+  
+</div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="content" id="sev">
+  <div class="contentcontainer">
+    
+    <div class="smallcolumn smallcolumn-reverse">
+  
+  <div class="smallcolumn-img"><img class="iconadjusted" src="/amd-sev.svg" alt="AMD SEV."></div>
+  <div class="smallcolumn-content"><h2 class="sctitle">Securing Virtual Machines.</h2>
+<h3 class="scsubtitle">AMD SEV.</h3>
+<p><strong>AMD Secure Encrypted Virtualization (SEV)</strong> is a CPU extension enabling a more secure separation between virtual machines (VMs) and the underlying hypervisor.
+AMD SEV allows developers to deploy VMs in an untrusted hypervisor environment securely.
+In other words, this means that computations in the cloud can be performed on confidential data even if the cloud provider is untrusted or compromised.</p>
+<p>AMD SEV achieves this level of protection by encrypting the VM&rsquo;s data.
+The encryption applies to the VM&rsquo;s memory as well as its register state upon context switches.
+The latest and most secure variant of SEV, namely, AMD SEV-SNP, additionally prevents cloud providers from altering the data stored inside the VM.</p>
+</div>
+</div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="content contentdark" id="cachewarp">
+  <div class="contentcontainer">
+    
+    <div class="smallcolumn ">
+  
+  <div class="smallcolumn-img"><img class="iconadjusted" src="/logo.svg" alt="Jump back"></div>
+  <div class="smallcolumn-content"><h2 class="sctitle">CacheWarp.</h2>
+<h3 class="scsubtitle">Traveling Through Time and Memory.</h3>
+<p><strong>CacheWarp</strong> is a software-based fault injection attack on SEV VMs.
+It allows the hypervisor to revert data modifications of the VM on a single-store granularity, leading to an old (stale) view of memory for the VM.</p>
+<p><strong>But why is that bad?</strong>
+For a simple example, assume you have a variable determining whether a user is successfully authenticated.
+By exploiting CacheWarp, an attacker can revert the variable to a previous state and thus take over an old (already authenticated) session.
+Furthermore, an attacker can revert the return addresses stored on the stack and, by that, change the control flow of a victim program.</p>
+</div>
+</div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="content" id="implications">
+  <div class="contentcontainer">
+    
+    <div class="smallcolumn smallcolumn-reverse">
+  
+  <div class="smallcolumn-img"><img class="iconadjusted" src="/security-breach.svg" alt="Security Breach"></div>
+  <div class="smallcolumn-content"><h2 class="sctitle">Practical Impact.</h2>
+<h3 class="scsubtitle">Security Implications.</h3>
+<p>CacheWarp enables attackers to attack AMD SEV VMs.
+As shown in the above videos, attackers can exploit CacheWarp to, for example, gain <strong>remote code execution</strong> and <strong>privilege escalation</strong> in the targeted virtual machine.</p>
+<p>Fortunately, AMD has tracked the issue as CVE-2023-20592 and provides a microcode update fixing the vulnerability.
+For more detailed information, we recommend reading the official <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3005.html">AMD Security Bulletin</a>.</p>
+</div>
+</div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="content contentdark" id="faq">
+  <div class="contentcontainer">
+    <h2 class="contenttitle">FAQ</h2>
+    <div><div class="accordion accordion-active">
+    <p>Is my computer vulnerable to this attack?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" style="display: block"><p>If you have an AMD CPU supporting AMD SEV, yes, your machine is affected.
+Nevertheless, if you do not rely on deploying secure virtual machines using AMD SEV, this vulnerability cannot be leveraged by an attacker.</p>
+<p>For more details, please refer to the official <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3005.html">AMD Security Bulletin</a>.</p>
+</div>
+</div>
+
+<div><div class="accordion ">
+    <p>What is AMD SEV?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" ><a href="https://www.amd.com/en/developer/sev.html">AMD Secure Encrypted Virtualization (SEV)</a> is a CPU extension enabling secure virtual machines in the presence of an untrusted or compromised hypervisor.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Does this work against all variants of AMD SEV, including SEV-SNP?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >Yes, while the exploitation for AMD SEV-SNP is more challenging, CacheWarp can be exploited in all current variants of AMD SEV.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Does CacheWarp affect traditional virtual machine isolation?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >No, CacheWarp only affects AMD SEV, as traditional virtual machines do not offer any protection against malicious hypervisors.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Is this a software or a hardware bug?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >CacheWarp is a <strong>hardware bug</strong> in AMD CPUs.
+For guidance mitigating this vulnerability on affected CPUs, we refer to the official <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3005.html">AMD Security Bulletin</a>.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Is this a transient-execution attack?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >No, CacheWarp is an <strong>architectural</strong> bug and thus does not fall into the category of transient-execution attacks like Meltdown and Spectre. It is also not a side-channel attack.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Is this exploited in the wild?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >We do not know.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Is there more technical information about CacheWarp?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >Yes, there is an academic <a href="paper.pdf">paper</a>.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>What is CVE-2023-20592?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" >CVE-2023-20592 is the official reference to CacheWarp. CVE is the standard for information security vulnerability names maintained by MITRE.</div>
+</div>
+
+<div><div class="accordion ">
+    <p>Can I use the logo?</p>
+    <img src="/chevron-arrow.svg">
+  </div>
+  <div class="accordion-panel" ><p>The logo is free to use, rights waived via CC0. Logo designed by <a href="https://cispa.de/de/people/c01lemo">Lea Mosbach</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logo</td>
+<td><a href="logo.svg">↓ SVG</a></td>
+<td><a href="logo.png">↓ PNG</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="content" id="who-found-it">
+  <div class="contentcontainer">
+    
+    <div class="centercontainer">
+<h2 id="who-found-it">Who found it?</h2>
+</div>
+<div class="centercontainer">
+<ul>
+<li>
+<div class="person"><a class="personname" href="https://zhangruiyi.me/">Ruiyi Zhang</a><a class="personaffiliation" href="https://cispa.de">(CISPA Helmholtz Center for Information Security)</a></div>
+</li>
+<li>
+<div class="person"><a class="personname" href="https://roots.ec/people/lukas-gerlach/">Lukas Gerlach</a><a class="personaffiliation" href="https://cispa.de">(CISPA Helmholtz Center for Information Security)</a></div>
+</li>
+<li>
+<div class="person"><a class="personname" href="https://roots.ec/people/daniel-weber/">Daniel Weber</a><a class="personaffiliation" href="https://cispa.de">(CISPA Helmholtz Center for Information Security)</a></div>
+</li>
+<li>
+<div class="person"><a class="personname" href="https://roots.ec/people/lorenz-hetterich/">Lorenz Hetterich</a><a class="personaffiliation" href="https://cispa.de">(CISPA Helmholtz Center for Information Security)</a></div>
+</li>
+<li>
+<div class="person"><a class="personname" href="https://www.linkedin.com/in/youheng-l%C3%BC-a799ba227/">Youheng Lü</a><a class="personaffiliation" >(Independent)</a></div>
+</li>
+<li>
+<div class="person"><a class="personname" href="https://andreaskogler.com/">Andreas Kogler</a><a class="personaffiliation" href="https://www.iaik.tugraz.at/">(Graz University of Technology)</a></div>
+</li>
+<li>
+<div class="person"><a class="personname" href="https://misc0110.net/">Michael Schwarz</a><a class="personaffiliation" href="https://cispa.de">(CISPA Helmholtz Center for Information Security)</a></div>
+</li>
+</ul>
+</div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="content contentdark contentsmall" id="acknowledgements">
+  <div class="contentcontainer">
+    <h2 class="contenttitle">Acknowledgements</h2>
+    <p>We would like to thank AMD for working with us during the responsible disclosure.
+We want to thank our shepherd and the anonymous reviewers for their guidance, comments and valuable suggestions, as well as Leon Trampert, Moritz Lipp, and Xinyue Shen for helpful feedback on this work. This work was supported in part by Semiconductor Research Corporation (SRC) Hardware Security Program (HWS). This research is supported in part by the European Research Council (ERC project FSSec 101076409). Additional funding was provided by a generous gift from AWS. Any opinions, findings, and conclusions or recommendations expressed in this paper are those of the authors and do not necessarily reflect the views of the funding parties.</p>
+
+  </div>
+</section>
+
+
+
+
+    </main><footer>
+  <div class="contentcontainer">
+    <div id="footercontainer">
+      <div class="footerlogos" style="padding-right:0.5rem;">
+        <div>
+          <img src="/cispa.svg" />
+          <img src="/helmholtz-brand-white.svg" />
+        </div>
+      </div>
+      <div class="footerlogos" style="padding: 0 0.5rem;">
+        <div>
+          <img src="/tugraz.svg" />
+        </div>
+      </div>
+      <div id="footeraddress" style="padding: 0 0.5rem;">
+        <div>
+          <span>CISPA Helmholtz Center for Information Security</span>
+          <span>Stuhlsatzenhaus 5</span>
+          <span>66123 Saarbrücken</span>
+        </div>
+      </div>
+      <div id="footerlinks" style="padding-left: 0.5rem;">
+        <div>
+          <a href="https://cispa.de/en/impressum">Imprint</a>
+          <a href="https://cispa.de/en/data-privacy-policy"
+            >Data Privacy Policy</a
+          >
+        </div>
+      </div>
+    </div>
+    <p style="text-align: center; color: gray;">Want to contribute to such research? <a href="https://career.cispa.de/phd/">CISPA is constantly looking for PhD students</a></p>
+    <p id="footerbottom" style="color: gray;">
+      Copyright © 2023, CISPA Helmholtz Center for Information Security, all rights reserved. - Last Update: 2023-11-14
+    </p>
+  </div>
+</footer>
+</body>
+
+</html>

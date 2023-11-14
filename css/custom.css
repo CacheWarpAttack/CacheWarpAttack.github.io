@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Light";
+  src: url(/fonts/Montserrat-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Light";
+  src: url(/fonts/Montserrat-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url(/fonts/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Medium";
+  src: url(/fonts/Montserrat-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "SemiBold";
+  src: url(/fonts/Montserrat-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Bold";
+  src: url(/fonts/Montserrat-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "ExtraBold";
+  src: url(/fonts/Montserrat-ExtraBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "IBMPlexMono";
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "SemiBold";
+  src: url(/fonts/IBMPlexMono-SemiBold.ttf) format("truetype");
+}
+
+:root {
+  --text: #1c1c1c;
+  --background: #f5f5f5;
+  --primary: #eb3300;
+  --primary-alt: #A72C5E;
+  --secondary: #FFBDAA;
+  --accent: #FF805B;
+  --accent-alt: #B69AB0;
+  --success: #00c458;
+  --error: #eb1c50;
+  --danger: #ff653f;
+
+  --link: var(--primary);
+  --link-visited: var(--accent);
+
+  --nav-text: #f5f5f5;
+  --nav-active: var(--primary);
+  --nav-background: var(--text);
+
+  --accordion: var(--secondary);
+  --accordion-dark: var(--background);
+  --accordion-content-dark: #2b2b2b;
+  --accordion-content: #ffffff;
+  --accordion-active: var(--secondary);
+  --accordion-divider: var(--accent);
+  --accordion-divider-dark: var(--accent);
+  --subtitle: #2b2b2b;
+  --subtitle-dark: #a0a0a0;
+  --button-border: var(--primary);
+  --button-background: var(--primary);
+  --button-background-hover: var(--accent);
+  --button-outline-background: white;
+  --button-outline-background-hover: var(--secondary);
+  --button-active: var(--primary);
+  --dialog-border: var(--accent);
+  --dialog-text-border: var(--accent);
+}
+
+#headline {
+  font-family: "IBMPlexMono", monospace;
+  color: var(--text);
+  font-size: min(8vw, 8rem);
+  text-align: left;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  #headline {
+    font-size: 4rem;
+    text-align: center;
+  }
+}
+
+#headline span {
+  margin-left: 0.5ch;
+}
+
+.nav-logo h1 {
+  font-family: "IBMPlexMono", monospace;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+body,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* https://codepen.io/sosuke/pen/Pjoqqp?__cf_chl_jschl_tk__=ecc0b72797ae71bc009d6322e3e470773936b386-1604211766-0-ASpz720gXnc6Ej0vzlgY9-KLmlPkldgcOx1wAmGTUCjLZLOxkArNxpRzZ9m8woL-NGmP9LBGVPws8UxMJZrR7O1qFH6QkKtrGVPw6StRnXiK1XTQR_nY905r0XobAG2nOmyC6Zq8mdyPDp1MyHD7JLodJUXCRViXhtmLmRVE_-JGarVJRlxs6k3DzAOQQEJewfp00DjhlD0mxr8ZKpk2yq6IPTZZQ52XYxh26FC5MxLHhs7LuAwhtolmDZyp4_IuwRg8I5m-2--MmvGE8CCqjRWrkE85zgkMXPlOqcZtppRpZhn6Uz9DZAuKheHwVBb0ySIhFYG92bvQOgiKX0TTswB1SHgOLIeqktuyUaAgxI_h */
+.contentdark .iconadjusted {
+  /* filter: brightness(0) saturate(100%) invert(47%) sepia(9%) saturate(976%) hue-rotate(227deg) brightness(87%) contrast(87%); */
+  filter: brightness(0) saturate(100%) invert(22%) sepia(68%) saturate(5085%) hue-rotate(15deg) brightness(102%) contrast(103%);
+  /* filter: brightness(0) saturate(100%) invert(82%) sepia(16%) saturate(1094%) hue-rotate(203deg) brightness(99%) contrast(89%); */
+}
+
+.iconadjusted {
+  filter: brightness(0) saturate(100%) invert(76%) sepia(59%) saturate(4303%) hue-rotate(322deg) brightness(103%) contrast(101%);
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
